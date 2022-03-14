@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d5e02e;
+    width: 100%;
+}
+
+.menu-button {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40px;
+    height: 36px;
+    padding: 10px;
+    border-radius: 7px;
+    background: #0a66c3;
+    cursor: pointer;
+
+}
+
+.menu-button span {
+    width: 36px;
+    height: 4px;
+    background: white;
+
+}
+
+.menu-toggle {
+    display: none;
+
+}
+
+.toggle {
+    display: none;
+    text-align: center;
+    background: #0a66c3;
+    border-radius: 7px;
+    padding: 20px;
+    width: 150px;
+    margin: 10px auto;
+
+}
+
+.toggle li {
+    list-style: none;
+    display: block;
+    padding: 10px 0;
+    color: #fafafa;
+
+}
+
+.menu-toggle:checked + .toggle {
+    display: block;
+
+}
+
+
+
+
+.logos-main {
+    display: flex;
+    flex-direction: row;
+    /* width: 100vh; */
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    
+}
+
+.logo {
+    width: 40%;
+    height: auto;
+    margin: 5%;
+}
+
+.logo img {
+    width: 100px;
+    height: 52px;
+}
+
+header {
+    width: 100%;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    /* height: 500px; */
+    /* cortar imagen */
+}
+
+header h2 {
+    font-size: 30px;
+    padding: 2% 10% 2% 10%;
+    text-align: center;
+
+}
+
+
