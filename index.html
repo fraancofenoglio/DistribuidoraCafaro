@@ -10,27 +10,49 @@
 <body>
 
     <nav>
-        <label for="menu-toggle">
 
-            <div class="menu-button">
+        <div class="name">
+            <a href="index.html">Distribuidora <span>Cafaro</span></a>
+        </div>
 
-                <span></span>
-                <span></span>
-                <span></span>
+        <div class="menu">
+            <label for="menu-toggle">
 
-            </div>
+                <div class="menu-button">
 
-        </label>
+                    <span></span>
+                    <span></span>
+                    <span></span>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+                </div>
 
-        <ul class="toggle">
-            <li>Inicio</li>
-            <li>Marcas</li>
-            <li>Zonas</li>
-            <li>Mi cuenta</li>
-            <li>Contacto</li>
-        </ul>
+            </label>
+
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+
+            <ul class="toggle">
+                <li>
+                    <a href="#">Inicio</a>
+                </li>
+
+                <li>
+                    <a href="#">Marcas</a>
+                </li>
+
+                <li>
+                    <a href="#">Zonas</a>
+                </li>
+
+                <li>
+                    <a href="#">Mi cuenta</a>
+                </li>
+
+                <li>
+                    <a href="#">Contacto</a>
+                </li>
+
+            </ul>
+        </div>
 
     </nav>
 
@@ -38,15 +60,33 @@
     <header>
 
         <img src="./assets/fiambres2.jpeg" alt="fiambres varios">
-        <h2>Abastecé tu negocio con los mejores productos.</h2>
+        <h2>Abastecé <span>tu negocio</span> con los mejores productos.</h2>
         
 
     </header>
 
+    <section class="about-us">
+        
+        <h3>Sobre <span>nosotros</span></h3>
+        
+        <div class="presentacion">
+            <p>
+                Somos una empresa dedicada al abastecimiento de despensas y autoservicios de la zona. Te brindamos excelentes productos que van desde fiambres y quesos hasta galletitas y fideos.
+            </p>
+        </div>
 
-    <section>
+        <div class="catalogo">
+            <button>
+                <a href="#">Consultar Catálogo</a>
+            </button>
+        </div>
 
-        <h3> Algunas marcas que trabajamos</h3>
+    </section>
+
+
+    <section class="section-marcas">
+
+        <h3> Algunas <span>marcas</span> que trabajamos</h3>
 
         <div class="logos-main">
 
@@ -71,31 +111,63 @@
     </section>
 
 
-    <section>
 
-        <h3>Zonas de reparto</h3>
+    <section class="reparto">
 
-        <div></div>
+        <h3>Zonas de <span>reparto</span></h3>
+
+        <div class="ciudades-reparto">
+
+            <p>
+                ►  Bragado  •  Chivilcoy  •  25 de Mayo ◄ 
+               ¡También en cuarteles!
+            </p>
+
+        </div>
+
+        <div class="mapa-reparto">
+                
+            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-61.02355957031251%2C-35.36441589327595%2C-60.11718750000001%2C-34.869031702008634&amp;layer=mapnik" style="border: 1px solid #EB5E28"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=11/-35.1171/-60.5704">Ver mapa más grande</a></small>
+
+        </div>
 
     </section>
 
-    <section>
+    <section class="clientes-main">
 
-        <h3>Sección clientes</h3>
+        <h3>Sección <span>clientes</span></h3>
 
-        <div>
+        <div class="cuenta-clientes">
 
-            <div>
-                <h5>¿Ya sos cliente?</h5>
+            <div class="registrado">
 
-                <div></div>
+                <h5>¿Tenés cuenta?</h5>
+
+                <div class="iniciar-sesion-button">
+
+                    <button>
+
+                        <a href="#">Iniciar sesión</a>
+
+                    </button>
+
+                </div>
 
             </div>
 
-            <div>
+            <div class="nuevo-cliente">
+                
                 <h5>¿Querés ser cliente?</h5>
 
-                <div></div>
+                <div class="registrarse-button">
+
+                    <button>
+
+                        <a href="#">Registrarse</a>
+
+                    </button>
+
+                </div>
         
             </div>
 
@@ -107,19 +179,51 @@
 
     <footer>
         
-        <h4>Contactate con nosotros</h4>
+        <div class="contacto">
 
-        <div>
+            <h3>Contacto</h3>
 
-            <div></div>
+            <div class="social">
 
-            <div></div>
+                <div>
+                    <a href="#">
 
-            <div></div>
+                        <img src="./assets/whatsapp-logo-36(1).png" alt="">
+
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+
+                        <img src="./assets/facebook-logo-36(1).png" alt="">
+
+                    </a>
+                </div>
+
+                <div>
+                    <a href="#">
+
+                        <img src="./assets/instagram-logo-36(1).png "alt="">
+
+                    </a>
+                </div>
+
+            </div>
+
 
         </div>
 
-    </footer>
+        <div class="final">
 
+            <h6>Landing page a modo de práctica hecha por
+                 <a href="https://github.com/fraancofenoglio">Franco Fenoglio.</a>
+            </h6>
+            
+        </div>
+
+    </footer>
+    
 </body>
+
 </html>
