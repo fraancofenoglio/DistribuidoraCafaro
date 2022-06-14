@@ -9,110 +9,95 @@
 }
 
 body {
-    width: 100%;
+    /* width: 100%; */
     /* background-color: #FFFCF2; */
     background-color: #CCC5B9;
     font-family: "Roboto Condensed";
     /* font-family: "Big Shoulders Display"; */
+    display: flex;
+    flex-direction: column;
+    /* width: 100vw; */
+
 }
 
 nav {
-    background-color: #EB5E28;
+    background-color: #4b3a24;
+    /* background-color: #EB5E28; */
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    height: 60px;
-    position: fixed;
-    /* flex-wrap: wrap; */
-}
-
-.name {
-    height: 50px;
-    margin-left: 10px ;
-    padding-top: 7px;
-    width: 100vh;
-}
-
-.name a {
-    font-family: "Big Shoulders Display";
-    color: #252422;
-    text-decoration: none;
-    font-size: 40px;
-    height: 50px;
-    margin: 5px;
-    margin-top: 8px;
-}
-
-.menu-button {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-between; */
     align-items: center;
-    width: 45px;
-    height: 40px;
-    padding: 8px;
-    border-radius: 7px;
-    background: #252422;
+    height: 70px;
+    width: 100%;
+    box-shadow: 0 5px 10px black;
+    margin-bottom: 2%;
+
+}
+
+#main-container-hamburguer {
+    display: flex;
+    flex-direction: row;
+    width: 34%;
+    height: 50px;
+    /* margin: 0px; */
+}
+
+#hamburguer button {
+    background: none;
+    border: 0;
     cursor: pointer;
-    float: right;
-    /* margin: 10px; */
-    
+    padding: 0;
+    width: 60px;
+    height: 50px;
 
 }
 
-.menu-button span {
-    width: 36px;
-    height: 3px;
-    background: #CCC5B9;
-
-}
-
-.menu-toggle {
-    display: none;
-
-}
-
-.toggle {
-    display: none;
-    text-align: center;
-    background: rgba(37, 36, 34, 0.98);
-    /* border-radius: 7px; */
-    padding: 10px;
-    width: 100%;
-    height: 100vh;
-    margin: 60px auto;
-    transition: all .5s;
-
-}
-
-.toggle li {
-    list-style: none;
+#hamburguer button span {
+    border-radius: 5px;
+    background: white;
     display: block;
-    /* padding: 10px 0; */
-    margin: 80px 0;
-    color: #fafafa;
+    width: 60%;
+    margin: 3px;
+    height: 3px;
 
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
 }
 
-.menu-toggle:checked + .toggle {
-    display:block;
+.ul-menu {
+    display: none;
+    position: absolute;
+    list-style: none;
+    padding: 1%;
+    margin: 0px;
+    margin-top: 8%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 85vw;
+} 
 
-
+.mostrarMenu {
+    display: block;
 }
 
-.menu {
-    width: 100%;
-    /* margin: 7px; */
-    position: fixed;
-}
-
-.toggle li a {
-    color: #CCC5B9;
+.link-list-menu, .list-menu{
+    color: white;
     text-decoration: none;
+    margin: 25% 0% 25% 0%;
     font-size: 40px;
 }
 
+/* .name {
+    width: 55%;
+} */
+
+.main-logo {
+    width: 140px;
+    padding: 1%;
+    padding-top: 2%;
+    /* margin-right: 30%; */
+}
 
 .logos-main {
     background-color: #FFFCF2;
@@ -143,10 +128,10 @@ header {
 }
 
 header img {
-    /* padding: 10px; */
-    max-width: 100%;
+    padding: 10px;
+    width: 100%;
     height: auto;
-    /* border-radius: 17px; */
+    border-radius: 17px;
 
 }
 
@@ -159,12 +144,11 @@ header h2 {
     /* background-color: #CCC5B9; */
     border-radius: 7px;
     background-color: #FFFCF2;
-
-
 }
 
 h2 span, h3 span {
     color: #EB5E28;
+    /* color:  #4b3a24; */
 }
 
 a span {
@@ -197,9 +181,6 @@ h3 {
 
 .logo img:hover {
     cursor: pointer;
-    /* width: 95px;
-    height: 47px;
-    transition: all 0.5s; */
 }
 
 .reparto {
@@ -268,6 +249,7 @@ h5 {
     width: 200px;
     height: 50px;
     background-color: #EB5E28;
+    background-color:  #4b3a24;
     border-radius: 25px;
     border: none;
 }
@@ -308,6 +290,7 @@ h5 {
     border: none;
     border-radius: 20px;
     background-color: #EB5E28;
+    background-color: #4b3a24;
 
 }
 
@@ -374,5 +357,133 @@ h5 {
     font-family: "Roboto Condensed";
 
 }
+
+
+
+
+/* ------------------------------------------- */
+
+
+
+
+/* apertura de boton hamburguesa */
+
+#hamburguer button.open .topline {
+    animation-name: top-line-animation;
+}
+
+#hamburguer button.open .middleline {
+    animation-name: middle-line-animation;
+}
+
+#hamburguer button.open .bottomline {
+    animation-name: bottom-line-animation;
+}
+
+/* cierre de boton hamburguersa */
+
+#hamburguer button .topline {
+    animation-name: top-line-animation-close;
+}
+
+#hamburguer button .middleline {
+    animation-name: middle-line-animation-close;
+}
+
+#hamburguer button .bottomline {
+    animation-name: bottom-line-animation-close;
+}
+
+/* animacion apertura */
+
+@keyframes top-line-animation{
+
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(3px) rotate(-45deg);
+    }
+}
+
+@keyframes bottom-line-animation{
+
+    50%, 100%{
+        margin: 0 auto;
+        transform: translateY(-3px) rotate(45deg);
+    }
+}
+
+@keyframes middle-line-animation{
+
+    20%, 100%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+}
+
+/* animacion cierre */
+
+@keyframes top-line-animation-close{
+
+    0%{
+        margin: 0 auto;
+        transform: translateY(3px) rotate(-45deg);
+    }
+
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+@keyframes middle-line-animation-close{
+
+    0%{
+        margin: 0 auto;
+        width: 0;
+        opacity: 0;
+    }
+
+    20%, 100%{
+        margin: 0 auto;
+        width: 60%;
+        opacity: 1;
+    }
+}
+
+@keyframes bottom-line-animation-close{
+
+    0%{
+        margin: 0 auto;
+        transform: translateY(-3px) rotate(45deg);
+    }
+    50%, 100%{
+        margin: 5px auto;
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+@media only screen and (min-width: 490px) {
+
+    #main-container-hamburguer {
+        width: 40%;
+    }
+    
+}
+
+@media only screen and (min-width: 540px) {
+
+    #main-container-hamburguer {
+        width: 45%;
+    }
+    
+}
+@media only screen and (min-width: 740px) {
+
+    #main-container-hamburguer {
+        width: 40%;
+    }
+    
+}
+
 
 /* ● • */

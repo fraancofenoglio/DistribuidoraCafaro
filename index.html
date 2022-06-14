@@ -6,55 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Distribuidora Cafaro</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="./assets/logo-cafaro3.png" type="image/png">
 </head>
 <body>
 
     <nav>
+        
+        <div id="main-container-hamburguer">
+    
+            <div id="hamburguer">
+                <button id="hb-btn">
+                    <span class="topline"></span>
+                    <span class="middleline"></span>
+                    <span class="bottomline"></span>
+    
+                    <ul class="ul-menu" id="menu">
+                        <li class="list-menu">
+                            <a class="link-list-menu" href="#">Inicio</a>
+                        </li>
+        
+                        <li class="list-menu">
+                            <a class="link-list-menu" href="#marcas">Marcas</a>
+                        </li>
+                        <li class="list-menu">
+                            <a class="link-list-menu" href="#zonas">Zonas</a>
+                        </li>
+                        <li class="list-menu">
+                            <a class="link-list-menu" href="#account">Mi cuenta</a>
+                        </li>
+                        <li class="list-menu">
+                            <a class="link-list-menu" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+    
+                </button>
+    
+            </div>
+    
+        </div>
 
         <div class="name">
-            <a href="index.html">Distribuidora <span>Cafaro</span></a>
+            <img class="main-logo" src="./assets/logo-cafaro3.png" alt="logo Distribuidora Cafaro">
         </div>
-
-        <div class="menu">
-            <label for="menu-toggle">
-
-                <div class="menu-button">
-
-                    <span></span>
-                    <span></span>
-                    <span></span>
-
-                </div>
-
-            </label>
-
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-
-            <ul class="toggle">
-                <li>
-                    <a href="#">Inicio</a>
-                </li>
-
-                <li>
-                    <a href="#">Marcas</a>
-                </li>
-
-                <li>
-                    <a href="#">Zonas</a>
-                </li>
-
-                <li>
-                    <a href="#">Mi cuenta</a>
-                </li>
-
-                <li>
-                    <a href="#">Contacto</a>
-                </li>
-
-            </ul>
-        </div>
-
     </nav>
+    
 
 
     <header>
@@ -84,7 +79,7 @@
     </section>
 
 
-    <section class="section-marcas">
+    <section class="section-marcas" id="marcas">
 
         <h3> Algunas <span>marcas</span> que trabajamos</h3>
 
@@ -112,7 +107,7 @@
 
 
 
-    <section class="reparto">
+    <section class="reparto" id="zonas">
 
         <h3>Zonas de <span>reparto</span></h3>
 
@@ -130,13 +125,13 @@
 
         <div class="mapa-reparto">
                 
-            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-61.02355957031251%2C-35.36441589327595%2C-60.11718750000001%2C-34.869031702008634&amp;layer=mapnik" style="border: 1px solid #EB5E28"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=11/-35.1171/-60.5704">Ver mapa más grande</a></small>
+            <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-61.02355957031251%2C-35.36441589327595%2C-60.11718750000001%2C-34.869031702008634&amp;layer=mapnik" style="border: 1px solid #EB5E28"></iframe><br/><small><a href="https://www.openstreetmap.org/#map=11/-35.1171/-60.5704" target="_blank" >Ver mapa más grande</a></small>
 
         </div>
 
     </section>
 
-    <section class="clientes-main">
+    <section class="clientes-main" id="account">
 
         <h3>Sección <span>clientes</span></h3>
 
@@ -182,7 +177,7 @@
 
     <footer>
         
-        <div class="contacto">
+        <div class="contacto" id="contacto">
 
             <h3>Contacto</h3>
 
@@ -226,7 +221,21 @@
         </div>
 
     </footer>
+
+    <script>
+        const nav = document.getElementById('hb-btn');
+        
+        
+        nav.addEventListener('click', e => {
+            nav.classList.toggle('open')
+        });
+        
+        const menu = document.getElementById('menu');
     
+        nav.addEventListener('click', e => {
+            menu.classList.toggle('mostrarMenu');
+        });
+    </script>
 </body>
 
 </html>
